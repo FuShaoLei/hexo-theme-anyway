@@ -1,0 +1,58 @@
+.header
+    color: color-sidebar-normal-text
+    background #fff
+    a
+        color: color-sidebar-normal-text
+
+.info
+    text-align: center
+    margin-top 30px
+    .info-img
+        height: 100px
+        width: 100px
+        border-radius:100px
+        transition all 0.3s
+        box-shadow  5px 5px 10px #d9d9d9, 
+             -5px -5px 10px #ffffff
+        &:hover
+            transform scale(1.05)
+            
+    .author
+        font-weight: bold
+        margin-top 20px
+        font-size 1.1em
+    .signature
+        font-weight: bold
+
+.nav
+    margin-top: 20px
+    .nav-div
+      position: relative
+      border-bottom 1px solid #EAECED
+      display: block
+      font-size 0.8em
+      height: 45px
+      transition: 0.3s
+      line-height: 45px
+      &:hover
+        color color-theme
+    .nav-icon
+      width: 30px
+      margin-top: 12px
+      text-align: center
+      position: relative
+      float: left
+      line-height 24px
+      svg
+        width 14px
+        height 14px
+    .active
+        font-weight bold
+
+.related
+    font-size 0.8em
+    margin-top 20px
+    padding-left 10px
+    &:before
+        content '\# '
+    

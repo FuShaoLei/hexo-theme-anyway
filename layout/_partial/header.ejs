@@ -1,0 +1,34 @@
+<header class="header">
+    <div class="inner">
+            <div class="info">
+                <a href="<%=config.root%>">
+                    <img src="<%= url_for(theme.sidebar.avator) %>" class="info-img">
+                </a>
+                
+                <div class="author"><%= theme.sidebar.name %></div>
+                <div class="info-signature"><%= theme.sidebar.signature %></div>
+            </div>
+            <div class="nav">
+                 <ul >
+                <% for (var i in theme.menu){ %>
+                    <li>
+                    <a class="nav-link" href="<%- url_for(theme.menu[i][0]) %>">
+                        <div class="nav-div">
+                        <span class="nav-icon">
+                        <i class="ic" data-feather="<% if (theme.menu[i][1]){ %><%= theme.menu[i][1] %><%} else{ %><%= 'hexagon' %><% } %>"></i>
+                        </span>
+                        <span class="nav-name"><%= i %></span>
+                    </div>
+                    </a>
+                   </li>
+                  <% } %>
+            </ul>
+            </div>
+            <div class="related">
+                Power By <a href="https://hexo.io/">Hexo</a> 全部灵感来自于 <a href="https://anyway.fm/">Anyway</a>
+            </div>
+           
+           
+
+    </div>
+</header> 

@@ -1,0 +1,50 @@
+<%
+var current=0;
+%>
+<% if (page.posts.length > 0) { %>
+  <div class="item-group">
+          <% page.posts.sort('date', -1).limit(10).each(post => { %>
+        <article class="<%if(current===0){%><%= 'item big'%><%}else{%><%= 'item'%><%}%>">
+          <div class="item-title">
+            <a href="<%- url_for(post.path)%>"><%= post.title%></a>
+          </div>
+          <div class="item-meta">
+            <span class="item-date" datetime="<%=post.date.toJSON()%>">
+              <%=date(post.date,'YYYY年MM月DD日')%>
+            </span>
+            <span>
+              <% if (post.tags && post.tags.length){ %>
+                <%- list_tags(post.tags, {
+                  show_count: false,
+                  class: 'item-tag'
+                }) %>
+              <% } %>
+            </span>
+          </div>
+          <div class="item-excerpt">
+            <%- strip_html(post.content).substr(0, 90) %>....<a  class="more" href="<%- url_for(post.path)%>"><span>继续阅读</span></a>
+          </div>
+
+          
+        </article>
+        <% 
+        if(current!==4)
+          current=current+1;
+        else if(current===4)
+          current=0;
+        %>
+      <% }); %>
+  </div>
+
+ 
+  <% if (page.total > 1){ %>
+    <nav id="paginator">
+      <% var prev_text =  __('上一页');var next_text = __('下一页') %>
+      <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text
+      }) %>
+    </nav>
+  <% } %>
+
+  <% } %>

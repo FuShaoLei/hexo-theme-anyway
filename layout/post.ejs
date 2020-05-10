@@ -1,0 +1,41 @@
+<article id="post">
+  <div class="inner">
+    <div class="article-main">
+       <h1><%=page.title%></h1>
+      <%-page.content%>
+    </div>
+    <aside>
+      <div class="aside-date">
+        <h5 class="aside-h5">发布日期</h5>
+        <span class="span" datetime="<%=page.date.toJSON()%>">
+          <%=date(page.date,'MM月DD日')%>
+        </span>
+      </div>
+      <div class="aside-toc">
+        <h5 class="aside-h5">本文目录</h5>
+        <%- toc(page.content,{class:"span-toc",list_number:false,max_depth: 1}) %>
+      </div>
+    </aside>
+  </div>
+  <div class="post-comment">
+    <% if ( theme.valine.open){ %>
+      <div class="comment-title">发表评论</div>
+      <% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+        <section id="comments" class="comments">
+          <style>
+            .comments{margin:30px;padding:10px;background:#fff}
+            @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+          </style>
+          <%- partial('_partial/valine', {
+            key: page.slug,
+            title: page.title,
+            url: config.url+url_for(page.path)
+            }) %>
+      </section>
+    <% } %>
+    <% } %>
+  </div>
+  
+</article>
+
+

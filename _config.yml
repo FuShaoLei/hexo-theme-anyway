@@ -1,0 +1,46 @@
+# 导航栏以及图标 图标网址：https://feathericons.com/
+menu:
+  首页/HOME: 
+    - /
+    - home
+  归档/ARCHIVE: 
+    - /archives
+    - archive
+  关于/ABOUT:
+    - /about
+    - alert-circle
+  留言/MESSAGE BOARD:
+    - /board
+    - edit-3
+  搜索/SEARCH:
+    - /search
+    - search
+
+# 自定义颜色
+color:
+  theme_color: "#F60C3E" #主题颜色，将会用在大多数地方
+  main_bg: "#ffffff" #内容块的背景色
+  normal_text: "#1E1E1E" # 普通文字的颜色
+  sidebar_bg: "#fffffff" #侧边栏的背景颜色
+  sidebar_normal_text: "#000000" #侧边栏里文字的颜色
+
+# 侧边栏的配置
+sidebar:
+  avator: ../img/avator.jpg #头像
+  name: 任我行 #名字
+  signature: #个性签名
+
+# 不蒜子统计
+busuanzi:
+  open: true # true | false 是否打开，默认false
+
+# Valine评论系统
+valine:
+  open: true # true | false 是否打开，默认false
+  appid: HBismw2vU6hg56PslAF2APW1-gzGzoHsz  #Leancloud应用的AppID
+  appkey: k41e2BJYdNbojyHuMnKT5LBK  #Leancloud应用的AppKey
+  verify: false #验证码
+  notify: true #评论回复提醒
+  avatar: robohash #评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  #头像类型可见： https://valine.js.org/avatar.html
+  placeholder: 留下你来过的痕迹~ #评论框占位符

@@ -1,0 +1,81 @@
+* 
+  margin 0
+  padding 0
+  border 0
+  vertical-align baseline
+  text-decoration none
+  list-style none
+  box-sizing border-box
+  -webkit-tap-highlight-color transparent
+body
+  --symbol "▪︎"
+  text-rendering optimizeSpeed
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-family 'Anyway Type','Myriad Pro','PingFang SC','Microsoft YaHei',sans-serif
+  text-align left
+  line-height 1
+  background color-main-bg
+  margin mask-width mask-width 0
+  scroll-behavior smooth
+  caret-color color-theme
+.mask 
+  position fixed
+  z-index 999
+  border calc(mask-width/ 2) solid color-theme
+  background color-theme
+  pointer-events none
+.mb,.mt 
+  height 0
+  width 100%
+  left 0
+.mb 
+  bottom 0
+  height mask-width
+.mt 
+  top 0
+  height mask-width
+.mv 
+  bottom 0
+  height 80vh
+  width 0
+.ml,.ml2 
+  left 0
+  width mask-width
+.mr,.mr2 
+  right 0
+  width mask-width
+.ml2,.mr2 
+  bottom none
+  top 0
+.main 
+  display flex
+  flex-direction row
+  background var(--bg)
+.section 
+  width 100%
+header 
+  font-size .875rem
+  padding .5rem 1.5rem
+  height 100%
+  width 240px
+  width side-width
+  border-right 1px dotted #ddd
+  position fixed
+  overflow scroll
+  -ms-overflow-style none
+  -moz-overflow-style none
+  overflow-style none
+  background-color var(--bg)
+  scrollbar-width none
+  &::-webkit-scrollbar 
+    display none
+    
+.content 
+  margin-left 240px
+  margin-left side-width
+  padding 1rem 1.5rem 2rem 1.5rem
+
+
+
+

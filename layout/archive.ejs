@@ -1,0 +1,57 @@
+<%
+function SectionToChinese(section){
+  var chnNumChar = ["〇","一","二","三","四","五","六","七","八","九"];
+  var chnUnitChar = ["","〇","百","","万","亿","万亿","亿亿"];
+  var strIns = '', chnStr = '';
+  var unitPos = 0;
+  var zero = true;
+  while(section > 0){
+      var v = section % 10;
+      if(v === 0){
+           if(!zero){
+                zero = true;
+                chnStr = chnNumChar[v] + chnStr;
+           }
+      }else{
+            zero = false;
+            strIns = chnNumChar[v];
+            strIns += chnUnitChar[unitPos];
+            chnStr = strIns + chnStr;
+      }
+      unitPos++;
+      section = Math.floor(section / 10);
+   }
+   return chnStr;
+}
+%>
+<div class="archive">
+  <h1 class="archive-name">往期存档<span class="archive-total">共<%=site.posts.length%>篇博文</span></h1>
+  <% var last;%>
+<% page.posts.each(function(post, i){ %>
+  <% var year = post.date.year(); %>
+  <% if (last != year){ %>
+    <% if (last != null){ %>
+    <% } %>
+    <% last = year; %>
+      <div class="archive-year">
+        <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= SectionToChinese(year) %>年</a>
+      </div>
+      <div class="archive-group">
+    <% } %>
+      <div class="archive-item">
+        <a href="<%- url_for(post.path) %>">
+          <div class="archive-item-title">
+            <span class="archive-item-date" datetime="<%=post.date.toJSON()%>">
+              <%=date(post.date,'MM/DD')%>
+            </span>
+            <div class="titlelink">
+              <%- post.title%>
+            </div>
+            
+          </div>
+          
+        </a>
+      </div>
+<% }) %>
+</div>
+</div>

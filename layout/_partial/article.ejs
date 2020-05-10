@@ -1,0 +1,29 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <% if (post.link || post.title){ %>
+        <header class="article-header">
+          <%- post.title%>
+        </header>
+      <% } %>
+      <div class="article-entry" itemprop="articleBody">
+          <%- post.content %>
+      </div>
+    </div>
+   
+  </article>
+  
+  <% if (!index && post.comments && theme.valine.open){ %>
+    <% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+      <section id="comments" class="comments">
+        <style>
+          .comments{margin:30px;padding:10px;background:#fff}
+          @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+        </style>
+        <%- partial('post/valine', {
+          key: post.slug,
+          title: post.title,
+          url: config.url+url_for(post.path)
+          }) %>
+    </section>
+  <% } %>
+  <% } %>

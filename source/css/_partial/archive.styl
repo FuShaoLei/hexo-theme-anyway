@@ -1,0 +1,121 @@
+.content
+  & > .inner 
+    max-width 90rem
+    margin 0 auto
+   
+.item-group
+    display flex
+    flex-wrap wrap
+    flex-direction row
+    @media mq-change
+        flex-direction column
+
+.item
+    height 200px
+    flex-basis 50%
+    padding 30px 40px
+    border-bottom 1px dotted #ddd
+    a
+        color color-normal-text
+        transition 0.2s
+        &:hover
+            color color-theme
+    .item-title
+        font-weight bold
+        font-size 1.6em
+    .item-meta
+        margin-top 15px
+        .item-tag-list
+            float left
+            font-size 0.9em
+            .item-tag-list-link
+                &:before
+                    content '\# '
+                    font-weight bold
+                    color color-theme
+        .item-date
+            float right
+            text-align center
+            color #999
+            font-size 0.8em
+    .item-excerpt
+        float left
+        margin-top 15px
+        line-height 1.6em
+        font-size 0.9em
+        .more
+            background #EFEFEF
+            font-weight bold
+            transition 0.2s
+            font-size 0.8em
+            padding 4px
+            &:hover
+                color #ffffff
+                background color-theme
+
+
+
+
+.big
+    flex-basis 100%
+    height 240px
+    .item-title
+        font-weight bold
+        font-size 1.9em
+
+
+
+.archive
+    .archive-name
+        font-size 1.9em
+        .archive-total
+            color color-theme
+            font-size 0.7em
+            &:before
+                content: "▪︎";
+                margin: 0 .5em;
+                font-size: .875em;
+                color: #333333;
+                opacity: .25;
+    padding 50px
+    a
+            color color-normal-text
+    .archive-year
+        font-weight bold
+        margin-top 30px
+        font-size 1.15em
+        a
+            color color-normal-text
+    .archive-group
+        display flex
+        margin-top 15px
+        flex-wrap wrap
+        flex-direction row
+        @media mq-change
+            flex-direction column
+        .archive-item
+            height 40px
+            flex-basis 50%
+            margin-top 10px
+            line-height 1.9em
+            .archive-item-title
+                transition 0.3s
+                .archive-item-date
+                    color #ffffff
+                    line-height 1em
+                    float left
+                    margin-top 7px
+                    font-size 0.7em
+                    font-weight bold
+                    padding 4px
+                    background color-theme
+                .titlelink
+                    border-bottom 1px dotted #888
+                    margin-left 50px
+                    margin-right 20px
+                    padding-bottom 10px
+                    transition 0.3s
+                    &:hover
+                        color color-theme
+                        border-bottom 1px dotted color-theme
+
