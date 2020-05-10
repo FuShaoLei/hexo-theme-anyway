@@ -14,7 +14,10 @@ pageTitle += ' [ ' + config.title + ' ]';
 <head>
   <meta charset="UTF-8">
   <title><%=pageTitle%></title>
-  
+  <link rel="shortcut icon" href="<%- url_for(theme.icon)%>" type="image/x-icon" />
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% } %>
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <%- css('css/hiya') %>
 </head>

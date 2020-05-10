@@ -30,6 +30,8 @@ sidebar:
   name: 任我行 #名字
   signature: #个性签名
 
+icon: ../img/icon.png
+
 # 不蒜子统计
 busuanzi:
   open: true # true | false 是否打开，默认false
