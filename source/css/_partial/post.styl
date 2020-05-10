@@ -5,6 +5,7 @@
         display flex
         height auto
         flex-direction row
+        justify-content space-between
         border-bottom 1px dotted #999
         aside
             flex-basis 250px
@@ -42,6 +43,10 @@
   clearfix()
   color: color-normal-text
   padding: 0 article-padding
+  li
+    &:before
+      content '\▪︎ '
+      color color-theme
   p, table
     line-height: line-height
     margin: line-height 0

@@ -10,7 +10,7 @@ var current=0;
           </div>
           <div class="item-meta">
             <span class="item-date" datetime="<%=post.date.toJSON()%>">
-              <%=date(post.date,'YYYY年MM月DD日')%>
+              <%=date(post.date,'M月D日')%>
             </span>
             <span>
               <% if (post.tags && post.tags.length){ %>
