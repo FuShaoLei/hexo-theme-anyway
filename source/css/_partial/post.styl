@@ -1,6 +1,5 @@
 #post
     line-height 1.5em
-    padding 40px
     & >.inner
         display flex
         height auto
@@ -8,14 +7,14 @@
         justify-content space-between
         border-bottom 1px dotted #999
         aside
-            flex-basis 250px
+            flex-basis 240px
             border-left 1px dotted #DDDDDD
             flex-shrink 0
             position -webkit-sticky
             margin-bottom 30px
             position sticky
             padding 20px
-            top 2rem
+            top 3rem
             height 100%
             .aside-date
               margin-bottom 30px
@@ -35,6 +34,9 @@
                   transition 0.2s
                   &:hover
                     color color-theme
+        @media mq-changeagain
+          aside
+            display none
 
                   
 
@@ -43,10 +45,10 @@
   clearfix()
   color: color-normal-text
   padding: 0 article-padding
-  li
-    &:before
-      content '\▪︎ '
-      color color-theme
+  ul>li
+    list-style disc
+  ol>li
+    list-style decimal
   p, table
     line-height: line-height
     margin: line-height 0
@@ -87,9 +89,8 @@
   blockquote
     font-size: 1em
     border-left: 5px solid color-theme
-    padding: 0.01em 1em
+    padding-left 20px
     margin-bottom: 10px
-    background: #DDDDDD
     footer
       font-size: font-size
       margin: line-height 0
@@ -128,6 +129,7 @@
       width: 100%
       height: 100%
       margin-top: 0
+    
 
 .comment-title
   text-align center

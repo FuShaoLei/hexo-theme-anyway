@@ -6,15 +6,15 @@ menu:
   归档/ARCHIVE: 
     - /archives
     - archive
-  关于/ABOUT:
-    - /about
-    - alert-circle
-  留言/MESSAGE BOARD:
-    - /board
-    - edit-3
-  搜索/SEARCH:
-    - /search
-    - search
+  # 关于/ABOUT:
+  #   - /about
+  #   - alert-circle
+  # 留言/MESSAGE BOARD:
+  #   - /board
+  #   - edit-3
+  # 搜索/SEARCH:
+  #   - /search
+  #   - search
 
 # 自定义颜色
 color:

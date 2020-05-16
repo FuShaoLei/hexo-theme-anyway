@@ -24,8 +24,6 @@ var current=0;
           <div class="item-excerpt">
             <%- strip_html(post.content).substr(0, 90) %>....<a  class="more" href="<%- url_for(post.path)%>"><span>继续阅读</span></a>
           </div>
-
-          
         </article>
         <% 
         if(current!==4)
@@ -34,9 +32,7 @@ var current=0;
           current=0;
         %>
       <% }); %>
-  </div>
-
- 
+  </div> 
   <% if (page.total > 1){ %>
     <nav id="paginator">
       <% var prev_text =  __('上一页');var next_text = __('下一页') %>

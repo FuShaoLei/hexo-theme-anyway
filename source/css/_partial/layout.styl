@@ -18,6 +18,12 @@ body
   margin mask-width mask-width 0
   scroll-behavior smooth
   caret-color color-theme
+  @media mq-changemore
+    header
+      display none
+    .content 
+      margin-left 0    
+  
 .mask 
   position fixed
   z-index 999
@@ -50,7 +56,7 @@ body
 .main 
   display flex
   flex-direction row
-  background var(--bg)
+  background #FFFFFF
 .section 
   width 100%
 header 
@@ -65,7 +71,7 @@ header
   -ms-overflow-style none
   -moz-overflow-style none
   overflow-style none
-  background-color var(--bg)
+  background-color #fff
   scrollbar-width none
   &::-webkit-scrollbar 
     display none
